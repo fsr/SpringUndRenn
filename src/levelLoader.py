@@ -9,21 +9,17 @@ import gameObject as go
 LEVELDIR = "../levels/"
 SQUARESIZE = 20
 
-
-
 """ ----------------------------------------------------------------------------
     Class for storing level information
 """
 class Level:
-    objectMapping = {
-        1: go.Stone,
-        2: go.Spawn,
-        3: go.Goal
-    }
-
     def __init__(self, path):
         # this dictonary maps object Id to functions. For example a constructor
-
+        self.objectMapping = {
+            1: go.Stone,
+            2: self.registerSpawn,
+            3: self.registerGoal
+        }
 
 
         self.goal = None
@@ -74,3 +70,11 @@ class Level:
 
                 x_off = x_off + SQUARESIZE
             y_off = y_off + SQUARESIZE
+
+    def registerSpawn(self, position):
+        self.spawn = go.Spawn(position)
+        return self.spawn
+
+    def registerGoal(self, position):
+        self.goal = go.Goal(position)
+        return self.goal

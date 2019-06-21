@@ -18,7 +18,7 @@ class GameObject(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.imagepath = IMAGEDIR + path
         self.load_image()
-
+        self.time = 0
         #set the initial position of the object
         self.rect = self.image.get_rect()
         self.set_position(pos)
