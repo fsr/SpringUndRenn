@@ -1,0 +1,75 @@
+% The Slide Definitions
+\input{../templates/course_definitions}
+
+% Author and Course information
+\input{../templates/course_information}
+
+% Presentation title
+% TODO Change the topic of the lesson
+\title{Workshop: Livecoding eines Jump and Run}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+%--------------------------------------------------------------------
+
+\begin{frame}[fragile]{Repo klonen}
+ Ein neues Verzeichnis erstellen:
+ \begin{lstlisting}
+$ mkdir <Name>
+ \end{lstlisting}
+ 
+ In das Verzeichnis wechseln:
+ \begin{lstlisting}
+$ cd <Name>
+ \end{lstlisting}
+
+ Das Repo mit Git klonen:
+ \begin{lstlisting}
+[<Name>]$ git clone https://github.com/fsr/SpringUndRenn.git
+ \end{lstlisting}
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}[fragile]{Virtuelle Maschine vorbereiten}
+ VM erstellen:
+ \begin{lstlisting}
+[<Name>]$ python -m venv <venvName>
+ \end{lstlisting}
+ 
+ VM starten:
+ \begin{lstlisting}
+[<Name>]$ source <venvName>/bin/activate
+ \end{lstlisting}
+
+ Pygame installieren:
+ \begin{lstlisting}
+(venvName)[<Name>]$ pip install pygame
+ \end{lstlisting}
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\begin{frame}[fragile]{Spiel starten}
+ VM starten, falls noch nicht geschehen:
+ \begin{lstlisting}
+[<Name>]$ source <venvName>/bin/activate
+ \end{lstlisting}
+
+ In das source Verzeichnis wechseln:
+ \begin{lstlisting}
+(venvName)[<Name>]$ cd SpringUndRenn/src
+ \end{lstlisting}
+ 
+  Spiel starten:
+ \begin{lstlisting}
+(venvName)[<src>]$ python game.py
+ \end{lstlisting}
+\end{frame}
+
+%--------------------------------------------------------------------
+
+\end{document}
