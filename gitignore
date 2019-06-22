@@ -1,2 +1,9 @@
 venv/
 src/__pycache__/
+*.vrb
+*.toc
+*.snm
+*.out
+*.nev
+*.log
+*.aux
